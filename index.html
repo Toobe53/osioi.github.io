@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个GitHub页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .emoji {
+            font-size: 4em;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🚀</div>
+        <h1>恭喜！</h1>
+        <h2>我的第一个 GitHub Pages 网站</h2>
+        <p>成功部署！通过 GitHub Pages 创建网站就是这么简单。</p>
+        <p>现在可以开始修改这个页面，添加更多内容。</p>
+        <p>🕒 部署时间：<span id="time"></span></p>
+    </div>
+    
+    <script>
+        // 显示当前时间
+        document.getElementById('time').textContent = new Date().toLocaleString();
+        
+        // 点击页面切换emoji
+        document.querySelector('.emoji').onclick = function() {
+            const emojis = ['🚀', '🎉', '🌟', '💻', '🌐', '📱'];
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            this.textContent = randomEmoji;
+        };
+    </script>
+</body>
+</html>
